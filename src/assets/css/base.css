@@ -1,0 +1,68 @@
+* {
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+}
+
+ul>li {
+    list-style: none;
+}
+
+.module-name {
+    display: inline-block;
+    font-size: 24px;
+    font-weight: 400;
+    color: #000 !important;
+}
+.module-log{
+    transform: translateY(-7px);
+    vertical-align: middle;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+/* 每个模块title样式 */
+.module-left .module-a {
+    display: inline-block;
+    margin-left: 20px;
+    text-decoration: none;
+    color: #6d757a;
+}
+
+/*  */
+.blbl-tab-item {
+    display: inline-block;
+    margin-right: 12px;
+    height: 20px;
+    padding: 2px 0;
+    border-bottom: 1px solid transparent;
+    line-height: 20px;
+    text-decoration: none;
+    color: #222;
+}
+.on {
+    border-bottom: 1px solid #00a1d6; 
+}
+.blbl-icon {
+    background-image: url("https://static.hdslb.com/images/base/icons.png");
+    background-repeat: no-repeat;
+}
+.viewer{
+    display: inline-block;
+    width: 13px;
+    height: 10px;
+    margin-right: 5px;
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAAKCAYAAABv7tTEAAAAAXNSR0IArs4c6QAAAM1JREFUKBVtjz0KwkAQhUMKi4BCLNJY2EiOY+EBvIKQIrcwpLT2AGmsFcwBBC9gq5WFdSR+b5mFGHbhy868Nz+bKOL0fZ9DAx9DcS4vdGIzW8wrLA3FrTyYww1qmKC7LZq6c8ngIw0aq8mIT1C7EgI9KR3Uez2V53XiBbyVx/D1RuDuApprOmNsA6a0i3Q2ZFwHOCqXsIIX6B/0JKH4CfJm8IAONq7JGguE8Sl8AcYU1nCHvTZVlkiUqcm+oPKNNjzBK9VUQjI0/wrGBvkPlcve4C7jgwAAAAAASUVORK5CYII=);
+}
+
+/* 公共动画 */
+.tab-change-enter,
+.tab-change-leave-to{
+    opacity: 0;
+}
+.tab-change-enter-active,
+.tab-change-leave-active{
+    transition: all 0.2s ease;
+}
