@@ -19,7 +19,7 @@ npm run build
 [![eL0qLq.jpg](https://s2.ax1x.com/2019/08/10/eL0qLq.jpg)](https://imgchr.com/i/eL0qLq)
 
 
-**说明**
+**说明**  
 1.页面中所有的数据都是静态的  
 2.安装了Vue-router 但是发现没什么用，嘿嘿  
 3.还有一些功能没有做完，我会更新到我觉得完美为止
