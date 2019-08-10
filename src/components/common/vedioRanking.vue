@@ -2,7 +2,8 @@
   <div class="vedio-ranking-container">
     <div class="vedio-ranking-head">
       <span class="ranking-title">排行</span>
-      <span
+      <span v-if='show'>
+        <span
         @mouseover="changeIndex(1)"
         :class="{'ranking-type':1,'ranking-type-selected':selectedIndex == 1}"
       >全部</span>
@@ -10,6 +11,7 @@
         @mouseover="changeIndex(2)"
         :class="{'ranking-type':1,'ranking-type-selected':selectedIndex == 2}"
       >原创</span>
+      </span>
       <div class="ranking-options">
         <p class="time-range">
           {{t1}}
@@ -38,6 +40,14 @@
 import rankingItem from "./vedioRankingItem";
 
 export default {
+  props:{
+    show:{
+      type:Boolean,
+      default(){
+        return true
+      }
+    }
+  },
   data() {
     return {
       selectedIndex: 1,

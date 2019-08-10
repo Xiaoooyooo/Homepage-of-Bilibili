@@ -1,10 +1,11 @@
 <template>
     <div class='module-tab-container'>
-        <div class='module-left'>
-            <slot name='module_left'></slot>
+        <div class='tab-left'>
+            <slot name='tab_left'></slot>
+            <slot name='center_tab_bar'></slot>
         </div>
-        <div class='module-right'>
-            <slot name='module_right'></slot>
+        <div class='tab-right'>
+            <slot name='tab_right'></slot>
         </div>
     </div>    
 </template>
@@ -18,13 +19,6 @@ export default {
     height: 45px;
     display: flex;
     justify-content: space-between;
-}
-.module-tab-container a{
-    margin-left: 30px;
-    text-decoration: none;
-}
-.module-tab-container a:hover{
-    color: #00a1d6;
 }
 .module-tab-container .tab-bar{
     display: inline-block;
@@ -42,7 +36,11 @@ export default {
     color: #00a1d6;
     border-bottom: 1px solid #00a1d6 !important;
 }
-.module-right{
+.tab-left{
+    flex: 1;
+    display: flex;
+}
+.tab-right{
     height: 100%;
 }
 </style>

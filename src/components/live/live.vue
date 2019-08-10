@@ -1,29 +1,28 @@
 <template>
-  <div class="live-container">
-    <div class="container-main">
-      <div class="left">
+  <div class="module-container">
+      <div class="module-left">
         <module-tab>
-          <div slot='module_left'>
+          <div slot='tab_left'>
             <i class="blbl-icon module-log log"></i>
-            <div class="module-name">正在直播</div>
+            <a href='javascript:;' class="module-name">正在直播</a>
             <span class="live-total">
               当前共有
               <span>xxxx</span>个在线直播
             </span>
-            <a class='module-a' href="javascript:;">
+            <a class='module-tips' href="javascript:;">
               <i class="blbl-icon fire-pic"></i>
               <span>233秒居然能做这些</span>
             </a>
           </div>
-          <div slot='module_right'>
+          <div slot='tab_right'>
             <more />
           </div>
         </module-tab>
-        <div class="left-main">
+        <div class="module-left-main">
           <live-item />
         </div>
       </div>
-      <div class="right">
+      <div class="module-right">
         <div class="right-top">
           <a @click='changeTab(1)' :class="{'blbl-tab-item':1,on:liveTabIndex == 1}" href="javascript:;">直播排行</a>
           <a @click='changeTab(2)' :class="{'blbl-tab-item':1,on:liveTabIndex == 2}" href="javascript:;">关注的主播</a>
@@ -37,7 +36,6 @@
           </transition>
         </div>
       </div>
-    </div>
   </div>
 </template>
 <script>
@@ -96,22 +94,6 @@ export default {
   transition: all 0.5s ease;
 }
 
-.live-container {
-  width: 1160px;
-  margin-bottom: 30px;
-}
-.container-main {
-  display: flex;
-  justify-content: space-between;
-}
-.left {
-  padding-right: 20px;
-}
-.left-top {
-  height: 45px;
-  display: flex;
-  justify-content: space-between;
-}
 .log {
   background-position: -141px -652px;
 }
@@ -127,19 +109,6 @@ export default {
   width:14px;
   background-position: -665px -1113px;
 }
-.left-main {
-  height: 323px;
-}
-.right {
-  height: 368px;
-  width: 260px;
-  display: flex;
-  flex-direction: column;
-  align-content: space-between;
-}
-.right-top {
-}
-
 .right-bot {
   position: relative;
   flex-grow: 1;

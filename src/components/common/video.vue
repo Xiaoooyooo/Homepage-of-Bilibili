@@ -1,59 +1,67 @@
 <template>
-    <li class="vedio-items">
-        <a class="item" href="javascript:;">
-        <div class="mask">
-          <img :src="background" alt="">
-            <div class="info">
-                <p>{{item.duration}}</p>
-                <a href="javascript:;" title="稍后再看"></a>
-            </div>
+  <li class="vedio-items">
+    <a class="item" href="javascript:;">
+      <div class="mask">
+        <i v-if="showCrown" class="blbl-icon icon-crown crown-golden"></i>
+        <img :src="background" alt />
+        <div class="info">
+          <p>{{item.duration}}</p>
+          <a v-if="watchLater" href="javascript:;" title="稍后再看"></a>
         </div>
-        <div class='item-details'>
-            <p class="item-title">{{item.title}}</p>
-            <div v-if='showTab' class='item-info'>
-                <div>
-                  <i class='blbl-icon vedio-log vedio-play'></i>
-                  <span>20.0万</span>
-                </div>
-                <div>
-                  <i class='blbl-icon vedio-log vedio-danmu'></i>
-                  <span>999</span>
-                </div>
-            </div>
+      </div>
+      <div class="item-details">
+        <p class="item-title">{{item.title}}</p>
+        <div class="item-info">
+          <div>
+            <i class="blbl-icon vedio-log vedio-play"></i>
+            <span>20.0万</span>
+          </div>
+          <div>
+            <i class="blbl-icon vedio-log vedio-danmu"></i>
+            <span>999</span>
+          </div>
         </div>
-        </a>
-    </li>
+      </div>
+    </a>
+  </li>
 </template>
 <script>
 export default {
-    props:{
-        item:{
-            type:Object,
-            default(){
-                return{
-                    duration:'04:23',
-                    title:'一些文字描述一些文字描述一些文字描述一些文字描述'
-                }
-            }
-        },
-        showTab:{
-            type:Boolean,
-            default(){
-                return false
-            }
-        },
-        background:{
-          type:String,
-          default(){
-            return 'https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=3668167685,567077787&fm=26&gp=0.jpg'
-          }
-        }
+  props: {
+    item: {
+      type: Object,
+      default() {
+        return {
+          duration: "04:23",
+          title: "一些文字描述一些文字描述一些文字描述一些文字描述"
+        };
+      }
+    },
+    background: {
+      type: String,
+      default() {
+        return "https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=3668167685,567077787&fm=26&gp=0.jpg";
+      }
+    },
+    showCrown:{
+      type:Boolean,
+      default(){
+        return false
+      }
+    },
+    watchLater: {
+      type: Boolean,
+      default() {
+        return true;
+      }
     }
-}
+  }
+};
 </script>
 
 <style scoped>
 .vedio-items {
+  margin: 5px 0;
   height: 150px;
   width: 160px;
   overflow: hidden;
@@ -73,7 +81,18 @@ export default {
   border-radius: 4px;
   overflow: hidden;
 }
-.mask img{
+.icon-crown {
+  z-index: 1;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 40px;
+  height: 24px;
+}
+.crown-golden {
+  background-position: -849px -148px;
+}
+.mask img {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -104,12 +123,13 @@ export default {
   width: 22px;
   background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAWCAYAAADEtGw7AAABT0lEQVQ4je3VMYrCQBTG8b/DWASLNKJgJ1hY2sloZeF2gkeYW+wZvIVXsLBJY5UdtLJLk17EIghCwChukWRxFzSaaLdfMwm8/EgemTclgOl02gEmwAAoky8RsAA+tdbrUoJ+AVZO8G9CoCeJ39Sq1+sopbBtO5e23+8xxrDdbi1gIog/vxAKYNs2Sqn0diBIenoP9X2fIAgyccv66WZZZBXvdjtc18UYkwlfJxM+n8+/1pfBefMPPw4LEZcEQcBqteJ0Or0GrlartFotLpcLnucxm83YbDbFYSEE/X6f4XBIpVLhcDjgOA6u63I8HvPDaRqNBuPxmHa7DcS7cT6f36yXj8IAUkq63S7NZpPlcomUtx9/Ck5Tq9UYjUZ3a976u0UQz9OiCcMwvYwk8XHyYYxBKXU9+p5Grybg4m1Hk9Bar4Ee4JC0JWeixOhprdffE/1yRW/TLMYAAAAASUVORK5CYII=);
 }
-.item-details{
-    width: 100%;
-    position: relative;
-    line-height: 20px;
+.item-details {
+  width: 100%;
+  position: relative;
+  line-height: 20px;
 }
 .item-title {
+  padding-top: 10px;
   height: 40px;
   color: #222;
   overflow: hidden;
@@ -118,31 +138,31 @@ export default {
 .item:hover .item-title {
   color: #00a1d6;
 }
-.item-info{
-    position: absolute;
-    bottom: 0;
-    width:100%;
-    background-color: #fff;
-    color:#9ba3ab;
-    transition: all 0.3s ease;
+.item-info {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: #fff;
+  color: #9ba3ab;
+  transition: all 0.3s ease;
 }
-.vedio-items:hover .item-info{
+.vedio-items:hover .item-info {
   bottom: -100%;
 }
-.item-info div{
+.item-info div {
   display: inline-block;
   width: 50%;
 }
-.vedio-log{
+.vedio-log {
   display: inline-block;
   height: 12px;
   width: 12px;
   margin-right: 5px;
 }
-.vedio-play{
+.vedio-play {
   background-position: -282px -90px;
 }
-.vedio-danmu{
+.vedio-danmu {
   background-position: -282px -218px;
 }
 </style>

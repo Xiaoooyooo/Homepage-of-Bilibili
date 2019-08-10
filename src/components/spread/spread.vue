@@ -2,10 +2,10 @@
   <div class="spread">
     <div class="left">
       <module-tab>
-        <div slot='module_left'>
+        <div slot='tab_left'>
           <i class="blbl-icon module-log log"></i>
-          <span class="module-name">推广</span>
-          <a class='module-a' href="javascript:;">笔记本电脑天天抽！</a>
+          <a href='javascript:;' class="module-name">推广</a>
+          <a class='module-tips' href="javascript:;">笔记本电脑天天抽！</a>
         </div>
       </module-tab>
       <ul class="left-content">

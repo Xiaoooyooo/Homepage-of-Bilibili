@@ -9,10 +9,19 @@ ul>li {
 }
 
 .module-name {
+    text-decoration: none;
     display: inline-block;
     font-size: 24px;
     font-weight: 400;
     color: #000 !important;
+    margin-left: 0 !important;
+    transition: all 0.3s ease;
+}
+.small-name{
+    font-size: 18px;
+}
+.module-name:hover{
+    color: #00a1d6 !important;
 }
 .module-log{
     transform: translateY(-7px);
@@ -22,15 +31,34 @@ ul>li {
     height: 40px;
     margin-right: 10px;
 }
-
-/* 每个模块title样式 */
-.module-left .module-a {
-    display: inline-block;
-    margin-left: 20px;
+.module-tips{
+    margin-left: 30px;
     text-decoration: none;
-    color: #6d757a;
+    color: #99a2aa;
 }
-
+.module-tips:hover{
+    color: #00a1d6;
+}
+/* 每个模块公共样式 */
+.module-container{
+    width: 100%;
+    display: flex;
+    margin-bottom: 30px;
+}
+.module-left {
+    width: 900px;
+    box-sizing: border-box;
+    padding-right: 20px;
+}
+.module-left-main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: flex-start;
+}
+.module-right {
+    width: 260px;
+}
 /*  */
 .blbl-tab-item {
     display: inline-block;

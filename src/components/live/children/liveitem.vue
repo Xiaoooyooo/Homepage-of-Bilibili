@@ -37,7 +37,8 @@ export default {
     align-content: space-between;
 }
 .live-item{
-    height:148px;
+    margin: 5px 0;
+    height:150px;
     width: 160px;
 }
 .item-content{
@@ -103,7 +104,7 @@ export default {
 }
 .live-details{
     position: relative;
-    padding-top: 8px;
+    padding-top: 10px;
     height: 40px;
     line-height: 20px;
 }

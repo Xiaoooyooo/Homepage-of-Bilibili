@@ -2,7 +2,7 @@
     <div class='m-container'>
       <div class='new'>
           <i class='blbl-icon new-refresh'></i>
-          <span><b>xxxx</b>条新动态</span>
+          <span><b v-if="!(msg == '换一换')">xxxx</b>{{ msg }}</span>
       </div>
       <div class='more'>
           <span>更多</span>
@@ -12,7 +12,14 @@
 </template>
 <script>
 export default {
-    
+    props:{
+      msg:{
+        type:String,
+        default(){
+          return '条新动态'
+        }
+      }
+    }
 }
 </script>
 <style scoped>
