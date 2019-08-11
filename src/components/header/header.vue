@@ -72,10 +72,13 @@ export default {
   position: absolute;
   right: 0;
   bottom: 20px;
-  background: rgba(255, 255, 255, 0.2);
+  padding: 2px;
+  background: rgba(0,0,0,.12);
+  border-radius: 6px;
   display: flex;
   align-items: center;
   justify-content: center;
+  
 }
 .ranking {
   margin-right: 3px;
@@ -92,24 +95,33 @@ export default {
   padding-right: 5px;
   background-position: -659px -655px;
 }
+form{
+  background-color: rgba(255, 255, 255, 0.88);
+  height: 32px;
+  border-radius: 4px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+form:hover{
+  background-color: rgba(255,255,255,1);
+}
 .input-search {
   width: 200px;
   line-height: 32px;
   outline: none;
   border: none;
   padding: 0 8px;
-  border-radius: 4px;
-  background: rgba(255, 255, 255, 0.88);
+  background: transparent;
 }
 .btn-search {
-  position: absolute;
+  float: right;
   cursor: pointer;
-  right: 0;
-  height: 100%;
+  height: 32px;
   width: 42px;
   border: none;
   outline: none;
   background-position: -653px -720px;
+  background-color: transparent;
 }
 .btn-search:hover {
   background-position: -718px -720px;

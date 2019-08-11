@@ -111,6 +111,6 @@ export default {
     height: 12px;
     margin-top: -2px;
     margin-right: 3px;
-    background: url(//s1.hdslb.com/bfs/static/jinkela/home/asserts/live-eye.png) no-repeat;
+    background: url('https://s1.hdslb.com/bfs/static/jinkela/home/asserts/live-eye.png') no-repeat;
 }
 </style>
