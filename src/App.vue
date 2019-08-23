@@ -7,5 +7,6 @@
 <style>
 @import './assets/css/base.css';
 #app {
+  --content-width: 1160px;
 }
 </style>
