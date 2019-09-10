@@ -3,7 +3,7 @@
 
 ---
 
-**[演示地址](https://xiaoooyooo.github.io/blbl/)**  
+**[演示地址](https://xiaoooyooo.github.io/demo/blbl/#/)**  
 
 **\*不是全部的功能，全部实现的话有点费时间，我选择适可而止**  
 ![](https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1565422629025&di=4af704089f480717a029fa959aa8d706&imgtype=0&src=http%3A%2F%2Fimg.9553.com%2Fuploadfile%2F2018%2F0316%2F20180316031734402.jpg)
