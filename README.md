@@ -3,8 +3,6 @@
 
 ---
 
-**[演示地址](https://xiaoooyooo.github.io/demo/blbl/#/)**  
-
 **\*不是全部的功能，全部实现的话有点费时间，我选择适可而止**  
 ![](https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1565422629025&di=4af704089f480717a029fa959aa8d706&imgtype=0&src=http%3A%2F%2Fimg.9553.com%2Fuploadfile%2F2018%2F0316%2F20180316031734402.jpg)
 
@@ -27,4 +25,3 @@ npm run build
 1.页面中所有的数据都是静态的  
 2.安装了Vue-router 但是发现没什么用，嘿嘿  
 3.各个文件名、组件名、类名等都是随便取的，英文能力有限，尽可能还是取了相关的名称  
-4.还有一些功能没有做完，我会更新到我觉得完美为止
