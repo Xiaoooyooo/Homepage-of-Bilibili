@@ -32,8 +32,8 @@
         </div>
         <div class="fanju-news-slider">
           <div class="slide-content" :style="'left:-'+slideLeft+'%'">
-            <a v-for="(i,index) in 3" :key="index" class="slide-item" href="javascript:;">
-              <img :src="slideImgs[index]" alt />
+            <a v-for="(i,index) in 3" :key="index" class="slide-item" href="javascript:;" :style="'background:url('+slideImgs[index]+') no-repeat center/cover;'">
+              <!-- <img :src="slideImgs[index]" alt /> -->
             </a>
           </div>
           <div class="slide-details">
@@ -92,9 +92,9 @@ export default {
     return {
       selectedIndex: 1,
       slideImgs: [
-        "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1564762152295&di=30ae435e566b87acfbf100e4cad799d7&imgtype=0&src=http%3A%2F%2Fb-ssl.duitang.com%2Fuploads%2Fitem%2F201308%2F18%2F20130818004841_TXhzJ.thumb.1000_0.jpeg",
-        "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1564761249651&di=9dc497575886e6bdb6440d4d3838a702&imgtype=0&src=http%3A%2F%2Fb-ssl.duitang.com%2Fuploads%2Fitem%2F201412%2F17%2F20141217210558_VG8nF.thumb.1000_0.jpeg",
-        "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1564761365491&di=a281dda93c285536af17c579810c38e8&imgtype=0&src=http%3A%2F%2Fp.store.itangyuan.com%2Fp%2Fchapter%2Fattachment%2FeBIteBbVe-%2FEgfveBMSE_6VetEveBIWElUuiBmq5u57G7LBHGuRKhSt96bT51yc56-.jpg"
+        "https://pic.netbian.com/uploads/allimg/201110/234958-1605023398e2c3.jpg",
+        "https://pic.netbian.com/uploads/allimg/210308/230659-161521601970be.jpg",
+        "https://pic.netbian.com/uploads/allimg/200405/171302-1586077982d6cd.jpg"
       ],
       slide: 0
     };

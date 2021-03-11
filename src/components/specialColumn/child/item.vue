@@ -1,29 +1,37 @@
 <template>
   <li class="item-container">
     <a class="cover">
-      <img
-        src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1565070990523&di=65111bb1c5698a3c781897fc5d5daf5e&imgtype=0&src=http%3A%2F%2Fb-ssl.duitang.com%2Fuploads%2Fitem%2F201202%2F13%2F20120213171359_nukLh.thumb.700_0.jpg"
-        alt
-      />
+      <img :src="post.cover" alt="" />
     </a>
     <div class="item-info">
-      <a href='javascript:;' class="info-title">标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题</a>
-      <div class='info-view'>
-				<div>
-					<i class='blbl-icon info-log view-log'></i>
-					<span>20.0万</span>
-					</div>
-				<div>
-					<i class='blbl-icon info-log comment-log'></i>
-					<span>999</span>
-					</div>
-				<div>up</div>
-			</div>
+      <a href="javascript:;" class="info-title"
+        >标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题</a
+      >
+      <div class="info-view">
+        <div>
+          <i class="blbl-icon info-log view-log"></i>
+          <span>20.0万</span>
+        </div>
+        <div>
+          <i class="blbl-icon info-log comment-log"></i>
+          <span>999</span>
+        </div>
+        <div>up</div>
+      </div>
     </div>
   </li>
 </template>
 <script>
-export default {};
+export default {
+  props: {
+    post: {
+      type: Object,
+      default() {
+        return {};
+      },
+    },
+  },
+};
 </script>
 <style scoped>
 .item-container {
@@ -33,7 +41,7 @@ export default {};
   display: flex;
 }
 .cover {
-	flex-shrink: 0;
+  flex-shrink: 0;
   width: 100px;
   height: 75px;
   border-radius: 4px;
@@ -44,43 +52,43 @@ export default {};
   width: 100%;
 }
 .item-info {
-	width: 305px;
+  width: 305px;
   margin-left: 15px;
 }
-.info-title{
-	display: block;
-	line-height: 20px;
-	width: 100%;
-	height: 40px;
-	overflow: hidden;
-	white-space: nowrap;
-	text-overflow: ellipsis;
-	text-decoration: none;
-	color: #222;
-	transition: all 0.3s ease;
+.info-title {
+  display: block;
+  line-height: 20px;
+  width: 100%;
+  height: 40px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  text-decoration: none;
+  color: #222;
+  transition: all 0.3s ease;
 }
-.info-title:hover{
-	color: #00a1d6;
+.info-title:hover {
+  color: #00a1d6;
 }
-.info-view{
-	margin-top: 10px;
-	display: flex;
+.info-view {
+  margin-top: 10px;
+  display: flex;
 }
-.info-view div{
-	flex: 1;
-	color: #99a2aa;
+.info-view div {
+  flex: 1;
+  color: #99a2aa;
 }
-.info-log{
-	display: inline-block;
-	vertical-align: -1px;
-	width: 14px;
-	height: 12px;
-	margin-right: 4px;
+.info-log {
+  display: inline-block;
+  vertical-align: -1px;
+  width: 14px;
+  height: 12px;
+  margin-right: 4px;
 }
-.view-log{
-	background-position: -345px -218px;
+.view-log {
+  background-position: -345px -218px;
 }
-.comment-log{
-	background-position: -345px -281px;
+.comment-log {
+  background-position: -345px -281px;
 }
 </style>

@@ -4,7 +4,7 @@
                 <a href="javascript:;">
                     <span :class="{'ranking-num':1,'top-3':i < 4}">{{i}}</span>
                     <i class='pic'>
-                        <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1563879964264&di=ceff0e0c2a1fbc59080156afba7fdd8a&imgtype=0&src=http%3A%2F%2Fimg4.duitang.com%2Fuploads%2Fitem%2F201610%2F30%2F20161030111603_m5hYr.jpeg" alt="">
+                        <img src="https://pic.netbian.com/uploads/allimg/170725/103840-15009503208823.jpg" alt="">
                     </i>
                     <div class='live-item-title'>
                         <p>直播人</p>

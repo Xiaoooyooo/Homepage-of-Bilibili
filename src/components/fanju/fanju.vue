@@ -45,7 +45,7 @@ export default {
     };
   },
   methods: {
-    changeTime(i) {
+    changeTime() {
       // console.log(i)
       // this.currentList = this.fullList[i]
     }

@@ -11,7 +11,7 @@
         </div>
       </module-tab>
       <ul class="module-left-main" key="1">
-        <item v-for='(i,index) in 8' :key='index' />
+        <item v-for='post of posts' :post='post' :key='post.key' />
       </ul>
     </div>
     <div class="module-right">
@@ -26,6 +26,44 @@ import ranking from "../common/vedioRanking";
 import item from './child/item';
 
 export default {
+  data() {
+    return {
+      //暂用同样的数据表示
+      posts: [{
+        key: '002',
+        cover: 'https://pic.netbian.com/uploads/allimg/201207/181311-16073359918b8b.jpg',
+        info: 'some text.....'
+      },{
+        key: '003',
+        cover: 'https://pic.netbian.com/uploads/allimg/201207/181311-16073359918b8b.jpg',
+        info: 'some text.....'
+      },{
+        key: '004',
+        cover: 'https://pic.netbian.com/uploads/allimg/201207/181311-16073359918b8b.jpg',
+        info: 'some text.....'
+      },{
+        key: '005',
+        cover: 'https://pic.netbian.com/uploads/allimg/201207/181311-16073359918b8b.jpg',
+        info: 'some text.....'
+      },{
+        key: '006',
+        cover: 'https://pic.netbian.com/uploads/allimg/201207/181311-16073359918b8b.jpg',
+        info: 'some text.....'
+      },{
+        key: '007',
+        cover: 'https://pic.netbian.com/uploads/allimg/201207/181311-16073359918b8b.jpg',
+        info: 'some text.....'
+      },{
+        key: '008',
+        cover: 'https://pic.netbian.com/uploads/allimg/201207/181311-16073359918b8b.jpg',
+        info: 'some text.....'
+      },{
+        key: '001',
+        cover: 'https://pic.netbian.com/uploads/allimg/201207/181311-16073359918b8b.jpg',
+        info: 'some text.....'
+      }]
+    }
+  },
   components: {
     moduleTab,
     more,
